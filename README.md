@@ -93,5 +93,6 @@ Please contact hubbardc@iastate.edu with bugs, comments or questions.
 * Thanks [PurpleBooth](https://github.com/PurpleBooth) for the template used to create this README.
 
 <a name="footnote1">1</a>: Benjamin Recht and Christopher Re.  Parallel stocastic gradient algorithms for large-scale matrix completion.  _Mathematical Programming Computation_, 5(2):201-226, 2013.
+
 <a name="footnote2">2</a>: Mark A Davenport, Yaniv Plan, Ewout van den Berg, and Mary Wootters. 1-bit matrix completion. Information and Inference, 3(3):189–223, 2014.
 
