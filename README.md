@@ -58,17 +58,20 @@ GPUFish tries to optimize over a loss function that is user-specified.
 The function that defines the gradient updates performed by GPUFish is provided in every file containing a _main()_ method.  The experiments and template provided in this repository all note where the change(s) in _GradientUpdates_ should be made and provide an alternate loss function as an example.
 
 ## Experiments
-This repository provides code to reproduce some of the experiments presented in the accompanying technical report.
+This repository provides code to reproduce some of the experimental results presented in the accompanying technical report.
 
 ### Movielens
-To reproduce the Movielens 100k and 1M experiments, you will need to download the data sets from [the grouplens website](http://grouplens.org/datasets/movielens/).  For our experiments, 5000 random ratings were used as test data points, and the remaining points were used to train GPUFish.  Once the data file is in the format described above, the code provided will perform *1-bit matrix completion[^fn2]* as described in the technical report provided with this code.  It will output (to the console) the percentage of total like/dislike ratings correctly predicted, as well the percentage of ratings correctly predicted as a function of the correct rating.
+To reproduce the Movielens 100k and 1M experiments, you will need to download the data sets from [the grouplens website](http://grouplens.org/datasets/movielens/).  For our experiments, 5000 random ratings were used as test data points, and the remaining points were used to train GPUFish.  Once the data file is in the format described above, the code provided will perform *1-bit matrix completion[^fn2]* as described in the technical report provided with this code.  It will output (to the console) the percentage of total like/dislike ratings correctly predicted, as well the percentage of ratings correctly predicted as a function of the correct rating.  The file _gpu_fish_movielens.cu_ will perform this experiment.
 
-### Matrix Recovery
-The training and test data sets used to measure the ability of GPUFish to recover a rank=1 matrix are available in the _data_ folder.  To repeat this experiment compile with the command:
+### Rank-1 Recovery
+The training and test data sets used to measure the ability of GPUFish to recover a rank=1 matrix are available in the _data_ folder.
+The file _gpu_fish_rank1_recovery.cu_ will perform this experiment.
+
+To repeat either the Rank-1 recovery experiment or the Movielens experiment compile with the command:
 ```
-nvcc -std=c++11 gpu_fish_functions.cu gpu_fish_recover_exp.cu
+nvcc -std=c++11 gpu_fish_functions.cu <either_experiment.cu>
 ```
-and run the experiments with
+and run the experiment with
 ```
 ./a.out
 ```
