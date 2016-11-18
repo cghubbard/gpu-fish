@@ -17,7 +17,7 @@ To use this software, you will need an NVIDIA graphics card with Compute Capabil
 
 To begin, clone the repository using:
 ```
-git clone http://bitbucket.org/cghubbard/gpu_fish.git
+git clone https://github.com/cghubbard/gpu-fish.git
 ```
 Next, navigate to the top folder of your repository and open:
 ```
