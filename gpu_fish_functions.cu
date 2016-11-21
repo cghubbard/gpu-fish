@@ -101,13 +101,13 @@ dataSet* readFile(std::string file, std::vector<std::tuple<float,float,float>>* 
 		std::stringstream stream(line);
 
 		stream >> user >> movie >> rating;
+		
+		maxRow = max(maxRow,(int)user);
+		maxCol = max(maxCol,(int)movie);
 
 		//========== subtract 1 to 0-index data ============//
 		user = user - 1;
 		movie = movie - 1;
-
-		maxRow = max(maxRow,(int)user);
-		maxCol = max(maxCol,(int)movie);
 
 		auto temp = std::make_tuple(user,movie,rating);
 
