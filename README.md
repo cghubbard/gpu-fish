@@ -1,7 +1,7 @@
 # GPUFish
 GPUFish is designed to solve very large matrix completion problems in a modular and scalable fashion on workstations equipped with a graphics processing unit (GPU).
 
-GPUFish builds upon the algorithmic techniques of Jellyfish<sup>[1](#footnote1)</sup>, a popular parallel stochastic gradient descent algorithm for matrix completion, but has been highly optimized to run efficiently on a GPU.  GPUFish enables the user to combine various loss functions and regularizers used in the matrix completion problem, making experimentation and testing quick and easy.  For details, please refer to the technical report:
+GPUFish builds upon the algorithmic techniques of Jellyfish<sup>[1](#footnote1)</sup>, a popular parallel stochastic gradient descent algorithm for matrix completion, but has been highly optimized to run efficiently on a GPU.  GPUFish enables the user to combine various loss functions and regularizers used in the matrix completion problem, making experimentation and testing quick and easy.  For details, please refer to the (soon to be released) technical report:
 
 C. Hubbard, C. Hegde, "GPUFish: A Parallel Computing Framework for Matrix Completion from a Few Observations", Iowa State University Technical Report, November 2016.
 
