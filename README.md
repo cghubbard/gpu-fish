@@ -63,17 +63,25 @@ This repository provides code to reproduce some of the experimental results pres
 ### Movielens
 To reproduce the Movielens 100k and 1M experiments, you will need to download the data sets from [the grouplens website](http://grouplens.org/datasets/movielens/).  For our experiments, 5000 random ratings were used as test data points, and the remaining points were used to train GPUFish.  Once the data file is in the format described above, the code provided will perform *1-bit matrix completion<sup>[2](#footnote2)</sup>* as described in the technical report provided with this code.  It will output (to the console) the percentage of total like/dislike ratings correctly predicted, as well the percentage of ratings correctly predicted as a function of the correct rating.  The file _gpu_fish_movielens.cu_ will perform this experiment.
 
+To repeat the Movielens recovery experiment compile with the command:
+```
+make movielens
+```
+and run the experiment with
+```
+./movie.out
+```
 ### Rank-1 Recovery
 The training and test data sets used to measure the ability of GPUFish to recover a rank=1 matrix are available in the _data_ folder.
 The file _gpu_fish_rank1_recovery.cu_ will perform this experiment.
 
-To repeat either the Rank-1 recovery experiment or the Movielens experiment compile with the command:
+To repeat the Rank-1 recovery experiment compile with the command:
 ```
-nvcc -std=c++11 gpu_fish_functions.cu <either_experiment.cu>
+make rank1
 ```
 and run the experiment with
 ```
-./a.out
+./rank1.out
 ```
 
 ## Authors
