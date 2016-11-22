@@ -22,7 +22,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include "gpu_fish_headers.h"
 
 #define RANK 1
-#define BLOCKS 200
+#define BLOCKS 20
 
 //========== define derivative and regulizer for gradient updates ============//
 __global__ 
@@ -52,7 +52,7 @@ void GradientUpdate(float* L, float* R, const int rank, float* dev_ratings, int*
 		}
 
 		i = (int) ijr[0];
-		j = (int) ijr[1];git 
+		j = (int) ijr[1]; 
 		m = ijr[2];
 	
 		for (int k=(threadIdx.x); k<RANK; k+= blockDim.x) {

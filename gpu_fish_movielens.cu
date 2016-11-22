@@ -23,8 +23,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #define RANK 30
 #define BLOCKS 40
-std::string training_data = "";
-std::string testing_data = "";
+std::string training_data = "/local/ml_20m_train1";
+std::string testing_data = "/local/ml_20m_test1";
 //========== define derivative and regulizer for gradient updates ============//
 __global__ 
 void GradientUpdate(float* L, float* R, const int rank, float* dev_ratings, int* dev_offsets, int* dev_chunk_size, int round, float alpha, float average) {
