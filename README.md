@@ -5,6 +5,8 @@ GPUFish builds upon the algorithmic techniques of Jellyfish<sup>[1](#footnote1)<
 
 C. Hubbard, C. Hegde, "GPUFish: A Parallel Computing Framework for Matrix Completion from a Few Observations", Iowa State University Technical Report, November 2016.
 
+a copy of the report can be found in this repository.
+
 ## Getting Started
 
 These instructions will get you GPUFish setup and running on your local machine for development and testing purposes.
