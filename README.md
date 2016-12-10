@@ -1,9 +1,11 @@
 # GPUFish
 GPUFish is designed to solve very large matrix completion problems in a modular and scalable fashion on workstations equipped with a graphics processing unit (GPU).
 
-GPUFish builds upon the algorithmic techniques of Jellyfish<sup>[1](#footnote1)</sup>, a popular parallel stochastic gradient descent algorithm for matrix completion, but has been highly optimized to run efficiently on a GPU.  GPUFish enables the user to combine various loss functions and regularizers used in the matrix completion problem, making experimentation and testing quick and easy.  For details, please refer to the (soon to be released) technical report:
+GPUFish builds upon the algorithmic techniques of Jellyfish<sup>[1](#footnote1)</sup>, a popular parallel stochastic gradient descent algorithm for matrix completion, but has been highly optimized to run efficiently on a GPU.  GPUFish enables the user to combine various loss functions and regularizers used in the matrix completion problem, making experimentation and testing quick and easy.  For details, please refer to the technical report:
 
 C. Hubbard, C. Hegde, "GPUFish: A Parallel Computing Framework for Matrix Completion from a Few Observations", Iowa State University Technical Report, November 2016.
+
+a copy of the report can be found in this repository.
 
 ## Getting Started
 
@@ -61,7 +63,7 @@ The function that defines the gradient updates performed by GPUFish is provided 
 This repository provides code to reproduce some of the experimental results presented in the accompanying technical report.
 
 ### Movielens
-To reproduce the Movielens 100k and 1M experiments, you will need to download the data sets from [the grouplens website](http://grouplens.org/datasets/movielens/).  For our experiments, 5000 random ratings were used as test data points, and the remaining points were used to train GPUFish.  Once the data file is in the format described above, the code provided will perform *1-bit matrix completion<sup>[2](#footnote2)</sup>* as described in the technical report provided with this code.  It will output (to the console) the percentage of total like/dislike ratings correctly predicted, as well the percentage of ratings correctly predicted as a function of the correct rating.  The file _gpu_fish_movielens.cu_ will perform this experiment.
+To reproduce the Movielens 100k and 1M experiments, you will need to download the data sets from [the grouplens website](http://grouplens.org/datasets/movielens/).  For our experiments, 5000 random ratings were used as test data points, and the remaining points were used to train GPUFish.  Once the data file is in the format described above, the code provided will perform *1-bit matrix completion<sup>[2](#footnote2)</sup>* as described in the technical report provided with this code.  It will output (to the console) the percentage of total like/dislike ratings correctly predicted, as well the percentage of ratings correctly predicted as a function of the correct rating.  The file _gpu_fish_movielens.cu_ will perform this experiment, you will need add the paths to your training and test sets (lines 26 and 27).
 
 To repeat the Movielens recovery experiment compile with the command:
 ```
