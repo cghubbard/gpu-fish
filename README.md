@@ -13,7 +13,7 @@ These instructions will get you GPUFish setup and running on your local machine 
 
 ### Prerequisites
 
-To use this software, you will need an NVIDIA graphics card with Compute Capability 2.0 or higher, and the NVIDIA CUDA Compiler (NVCC).  The relevant installation instructions for NVCC are part of the CUDA Toolkit and can be found [here](https://developer.nvidia.com/cuda-downloads).
+To use this software, you will need an NVIDIA graphics card with Compute Capability 2.0 or higher, and the NVIDIA CUDA Compiler (NVCC).  NVCC is part of the CUDA Toolkit and can be found [here](https://developer.nvidia.com/cuda-downloads).
 
 ### Installing
 
